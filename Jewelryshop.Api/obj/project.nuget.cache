@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k1eppFvt1uM=",
+  "dgSpecHash": "s+bbzxC+Ihk=",
   "success": true,
-  "projectFilePath": "c:\\Users\\hp\\OneDrive\\Desktop\\jewelry shop\\Jewelryshop.Api\\Jewelryshop.Api.csproj",
+  "projectFilePath": "C:\\Users\\hp\\OneDrive\\Desktop\\jewelry shop\\Jewelryshop.Api\\Jewelryshop.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\cloudinarydotnet\\1.27.5\\cloudinarydotnet.1.27.5.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

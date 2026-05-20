@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\hp\\OneDrive\\Desktop\\jewelry shop\\Jewelryshop.Api\\Jewelryshop.Api.csproj": {}
+    "C:\\Users\\hp\\OneDrive\\Desktop\\jewelry shop\\Jewelryshop.Api\\Jewelryshop.Api.csproj": {}
   },
   "projects": {
-    "c:\\Users\\hp\\OneDrive\\Desktop\\jewelry shop\\Jewelryshop.Api\\Jewelryshop.Api.csproj": {
+    "C:\\Users\\hp\\OneDrive\\Desktop\\jewelry shop\\Jewelryshop.Api\\Jewelryshop.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\hp\\OneDrive\\Desktop\\jewelry shop\\Jewelryshop.Api\\Jewelryshop.Api.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\OneDrive\\Desktop\\jewelry shop\\Jewelryshop.Api\\Jewelryshop.Api.csproj",
         "projectName": "Jewelryshop.Api",
-        "projectPath": "c:\\Users\\hp\\OneDrive\\Desktop\\jewelry shop\\Jewelryshop.Api\\Jewelryshop.Api.csproj",
+        "projectPath": "C:\\Users\\hp\\OneDrive\\Desktop\\jewelry shop\\Jewelryshop.Api\\Jewelryshop.Api.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\hp\\OneDrive\\Desktop\\jewelry shop\\Jewelryshop.Api\\obj\\",
+        "outputPath": "C:\\Users\\hp\\OneDrive\\Desktop\\jewelry shop\\Jewelryshop.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config"
