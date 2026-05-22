@@ -7,8 +7,33 @@ const STATUS_NAME = Object.fromEntries(Object.entries(STATUS).map(([key, value])
 let initialized = false;
 
 function sql() {
-  if (!process.env.DATABASE_URL) throw new Error('DATABASE_URL is not configured.');
-  return neon(process.env.DATABASE_URL);
+  const connectionString = process.env.DATABASE_URL || process.env.POSTGRES_URL || process.env.POSTGRES_PRISMA_URL;
+  if (!connectionString) throw new Error('DATABASE_URL is not configured.');
+  return neon(normalizeConnectionString(connectionString));
+}
+
+function normalizeConnectionString(connectionString) {
+  if (connectionString.startsWith('postgres://') || connectionString.startsWith('postgresql://')) {
+    return connectionString;
+  }
+  const parts = Object.fromEntries(
+    connectionString
+      .split(';')
+      .map((part) => part.trim())
+      .filter(Boolean)
+      .map((part) => {
+        const index = part.indexOf('=');
+        return [part.slice(0, index).trim().toLowerCase().replaceAll(' ', ''), part.slice(index + 1).trim()];
+      })
+  );
+  const host = parts.host;
+  const database = parts.database;
+  const username = parts.username || parts.userid || parts.user;
+  const password = parts.password;
+  if (!host || !database || !username || !password) {
+    throw new Error('DATABASE_URL is not configured correctly.');
+  }
+  return `postgresql://${encodeURIComponent(username)}:${encodeURIComponent(password)}@${host}/${encodeURIComponent(database)}?sslmode=require`;
 }
 
 function send(res, status, body) {
