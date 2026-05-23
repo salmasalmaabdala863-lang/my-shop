@@ -1,55 +1,30 @@
-# Deployment Guide
+# Frontend deployment (Vercel)
 
-## Backend API
+This app is deployed separately from the .NET API.
 
-Recommended options:
+## Vercel setup
 
-- Render
-- Railway
-- Azure App Service
-- VPS with PostgreSQL
-
-Required environment settings:
+1. Import the GitHub repo on [vercel.com](https://vercel.com).
+2. Set **Root Directory** to `Jewelryshop.Client`.
+3. Add environment variable:
 
 ```text
-ConnectionStrings__DefaultConnection=your_postgres_connection_string
-Cloudinary__CloudName=your_cloud_name
-Cloudinary__ApiKey=your_api_key
-Cloudinary__ApiSecret=your_api_secret
-ASPNETCORE_ENVIRONMENT=Production
+VITE_API_BASE_URL=https://your-railway-api.up.railway.app
 ```
 
-Build command:
+(No trailing slash.)
+
+4. Deploy. Build output is `dist/`.
+
+## Backend
+
+The API runs on **Railway** from `Jewelryshop.Api/`. Full instructions: [../DEPLOY.md](../DEPLOY.md).
+
+## Build locally
 
 ```powershell
-dotnet publish -c Release
-```
-
-## Frontend React
-
-Recommended options:
-
-- Netlify
-- Vercel
-- Render Static Site
-
-Required environment variable:
-
-```text
-VITE_API_BASE_URL=https://your-backend-domain.com
-```
-
-Build command:
-
-```powershell
-npm.cmd install
-npm.cmd run build
-```
-
-Publish folder:
-
-```text
-dist
+npm install
+npm run build
 ```
 
 ## Local development
